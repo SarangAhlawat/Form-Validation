@@ -14,32 +14,33 @@
     <section id="section">
         <div class="input-container">
             <h1 class="heading">Form Validation</h1>
+
             <form class="inputform" action="" onsubmit="return validateForm()">
-                <div class="formpart" id="name">
-                    <span>Name: </span> <input type="text" class="name inputbox" placeholder="Enter Full Name">
-                    <p class="name_error"></span>
-                </div>
-                <div class="formpart" id="email">
-                    <span>Email: </span> <input type="email" class="email inputbox" placeholder="Enter Email">
-                    <p class="email_error"></p>
-                </div>
-                <div class="formpart" id="phone">
-                    <span>Phone: </span> <input type="phone" class="number inputbox" placeholder="Enter Phone Number">
-                    <p class="phone_error"></p>
-                </div>
-                <div class="formpart" id="pass" style="position: relative; right: 0.7rem;">
-                    <span>Password: </span> <input type="password" class="pass inputbox" placeholder="Enter password">
-                    <p class="pass_error"></p>
-                </div>
-                <div class="formpart" id="Cpass" style="position: relative; right: 2.47rem;">
-                    <span>Confirm Password: </span> <input type="password" class="Cpass inputbox"
-                        placeholder="Confirm password">
-                        <p class="Cpass_error"></p>
-                </div>
-            </form>
-            <form class="btnform">
+
+                <div>
+                    <span>Name: </span><input type="text" id="name" class="name inputbox" placeholder="Enter Full Name">
+                <p id="name_error" style="color: red;"></p>
+
+                <span>Email: </span> <input type="email" id="email" class="email inputbox" placeholder="Enter Email">
+                <p class="email_error"></p>
+
+                <span>Phone: </span> <input type="phone" id="phone" class="number inputbox"
+                    placeholder="Enter Phone Number">
+                <p class="phone_error"></p>
+
+                <span>Password: </span> <input type="password" id="pass" style="position: relative; right: 0.7rem;"
+                    class="pass inputbox" placeholder="Enter password">
+                <p class="pass_error"></p>
+
+                <span>Confirm Password: </span> <input type="password" id="Cpass"
+                    style="position: relative; right: 2.47rem;" class="Cpass inputbox" placeholder="Confirm password">
+                <p class="Cpass_error"></p>
+                
+                <!-- </form>
+            <form class="btnform"> -->
                 <input type="submit" class="submit btn" placeholder="Submit">
                 <input type="reset" class="reset btn" placeholder="Reset">
+                </div>
             </form>
         </div>
     </section>
