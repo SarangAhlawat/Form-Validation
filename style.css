@@ -53,6 +53,7 @@ h1{
     height: 5vmin;
     width: 35vmin;
     background-color: rgb(201, 200, 200);
+    margin: 0.4rem;
 }
 
 .btn{
@@ -62,6 +63,6 @@ h1{
     background-color: rgb(41, 50, 150);
     margin: 10px;
     width: 15vmin;
-    height: 4vmin;
+    height: 5vmin;
     color: aliceblue;
 }
