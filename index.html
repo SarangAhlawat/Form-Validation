@@ -15,36 +15,28 @@
         <div class="input-container">
             <h1 class="heading">Form Validation</h1>
 
-            <form class="inputform" action="" onsubmit="return validateForm()">
+            <form class="form-container">
+                <label for="text" class="text-label">Name:</label>
+                <input type="text" class="inputbox" id="name-input" placeholder="Enter Full Name"><br>
 
-                <div>
-                    <span>Name: </span><input type="text" id="name" class="name inputbox" placeholder="Enter Full Name">
-                <p id="name_error" style="color: red;"></p>
+                <label for="email" class="email-label">Email:</label>
+                <input type="email" class="inputbox" id="email-input" placeholder="Enter Email"><br>
 
-                <span>Email: </span> <input type="email" id="email" class="email inputbox" placeholder="Enter Email">
-                <p class="email_error"></p>
+                <label for="phone" class="phone-label">Phone:</label>
+                <input type="phone" class="inputbox" id="phone-input" placeholder="Enter Phone Number"><br>
 
-                <span>Phone: </span> <input type="phone" id="phone" class="number inputbox"
-                    placeholder="Enter Phone Number">
-                <p class="phone_error"></p>
+                <label for="password" class="pass-label">Password:</label>
+                <input type="password" class="inputbox" id="pass-input" placeholder="Enter Password"><br>
 
-                <span style="position: relative; right: 0.7rem;">Password: </span> <input type="password" id="pass" style="position: relative; right: 0.7rem;"
-                    class="pass inputbox" placeholder="Enter password">
-                <p class="pass_error"></p>
+                <label for="password" class="Cpass-label">Confirm Password:</label>
+                <input type="password" class="inputbox" id="Cpass-input" placeholder="Confirm Password"><br>
 
-                <span style="position: relative; right: 2.47rem;">Confirm Password: </span> <input type="password" id="Cpass"
-                    style="position: relative; right: 2.47rem;" class="Cpass inputbox" placeholder="Confirm password">
-                <p class="Cpass_error"></p>
-                
-                <!-- </form>
-            <form class="btnform"> -->
                 <input type="submit" class="submit btn" placeholder="Submit">
                 <input type="reset" class="reset btn" placeholder="Reset">
-                </div>
             </form>
         </div>
     </section>
-
+    
     <script src="script.js"></script>
 </body>
 
