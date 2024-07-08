@@ -11,12 +11,18 @@
     justify-content: center;
     align-items: center;
     height: 70vh;
-    background-color: darkslategray;
+    
+}
 
+.input-container{
+    background-color: rgba(255, 255, 255, 0.921);
+    width: 30rem;
+    margin-top: 12rem;
+    border-radius: 0.5rem;
 }
 
 body{
-    background-color: darkslategray;
+    background-color: rgb(0, 157, 255);
 }
 
 .inputform{
@@ -46,19 +52,16 @@ h1{
     border-radius: 0.5rem;
     height: 5vmin;
     width: 35vmin;
-    background-color: rgb(161, 160, 160);
+    background-color: rgb(201, 200, 200);
 }
 
 .btn{
     border-color: rgb(28, 8, 8);
     border-width: 2px;
     border-radius: 0.5rem;
-    background-color: seagreen;
+    background-color: rgb(41, 50, 150);
     margin: 10px;
     width: 15vmin;
     height: 4vmin;
-}
-
-.errorspan{
-    color: red;
+    color: aliceblue;
 }

@@ -12,24 +12,29 @@
 
 <body>
     <section id="section">
-        <h1 class="heading">Form Validation</h1>
         <div class="input-container">
-            <form class="inputform" onsubmit="return validateForm()">
+            <h1 class="heading">Form Validation</h1>
+            <form class="inputform" action="" onsubmit="return validateForm()">
                 <div class="formpart" id="name">
-                    <span>Name: </span> <input type="text" class="name inputbox" placeholder="Enter Full Name"><span class="errorspan"></span>
+                    <span>Name: </span> <input type="text" class="name inputbox" placeholder="Enter Full Name">
+                    <p class="name_error"></span>
                 </div>
                 <div class="formpart" id="email">
-                    <span>Email: </span> <input type="email" class="email inputbox" placeholder="Enter Email"><span class="errorspan"></span>
+                    <span>Email: </span> <input type="email" class="email inputbox" placeholder="Enter Email">
+                    <p class="email_error"></p>
                 </div>
                 <div class="formpart" id="phone">
-                    <span>Phone: </span> <input type="phone" class="number inputbox" placeholder="Enter Phone Number"><span class="errorspan"></span>
+                    <span>Phone: </span> <input type="phone" class="number inputbox" placeholder="Enter Phone Number">
+                    <p class="phone_error"></p>
                 </div>
                 <div class="formpart" id="pass" style="position: relative; right: 0.7rem;">
-                    <span>Password: </span> <input type="password" class="pass inputbox" placeholder="Enter password"><span class="errorspan"></span>
+                    <span>Password: </span> <input type="password" class="pass inputbox" placeholder="Enter password">
+                    <p class="pass_error"></p>
                 </div>
                 <div class="formpart" id="Cpass" style="position: relative; right: 2.47rem;">
                     <span>Confirm Password: </span> <input type="password" class="Cpass inputbox"
-                        placeholder="Confirm password"><span class="errorspan"></span>
+                        placeholder="Confirm password">
+                        <p class="Cpass_error"></p>
                 </div>
             </form>
             <form class="btnform">
