@@ -12,8 +12,6 @@ const emailError = document.querySelector('.email-error');
 const phoneError = document.querySelector('.phone-error');
 const passError = document.querySelector('.pass-error');
 const CpassError = document.querySelector('.Cpass-error');
-const nameError2 = document.querySelector('.name-error2');
-const passError2 = document.querySelector('.pass-error2');
 
 
 // Add event listener to the form
@@ -24,7 +22,7 @@ form.addEventListener('submit', (event) => {
     // Validate inputs
     let valid = true;
 
-    // Validate name
+    // name
     if (nameInput.value.trim() === '') {
         nameError.textContent = 'Name field cannot be empty';
         valid = false;
@@ -36,7 +34,7 @@ form.addEventListener('submit', (event) => {
         nameError.textContent = '';
     }
 
-    // Validate email
+    // email
     function validEmail(email) {
         const emailContent = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return emailContent.test(email);
@@ -49,7 +47,7 @@ form.addEventListener('submit', (event) => {
         valid = false;
     }
 
-    // Validate phone
+    // phone
     const phoneValid = /^[0-9]{10}$/;
     if (phoneValid.test(phoneInput.value)) {
         phoneError.textContent = '';
@@ -58,20 +56,20 @@ form.addEventListener('submit', (event) => {
         valid = false;
     }
 
-    // Validate password
+    // password
     const passValid = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*\[0-9])/;
     if (passInput.value.trim() === '') {
-        passError2.textContent =  'Enter a valid password';
+        passError.textContent =  'Enter a valid password';
         valid = false;
     } else if (!passValid.test(passInput.value)) {
-        passError2.textContent = 'Enter a valid password';
+        passError.textContent = 'Enter a valid password';
         valid = false;
     }
     else {
         passError.textContent = '';
     }
 
-    // Validate confirm password
+    // confirm password
     if (CpassInput.value.trim() !== passInput.value.trim()) {
         CpassError.textContent = 'Passwords should match';
         valid = false;
@@ -79,7 +77,7 @@ form.addEventListener('submit', (event) => {
         CpassError.textContent = '';
     }
 
-    // If the form is valid, submit it
+    // If valid, submit
     if (valid) {
         form.submit();
     }
@@ -92,3 +90,9 @@ const showPass = () => {
         passInput.type = 'password'
     }
 }
+
+// let paras = document.querySelectorAll('.paras');
+
+// let resetFunction = () => {
+//     paras.textContent = '';
+// }
