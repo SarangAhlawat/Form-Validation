@@ -19,6 +19,7 @@
     width: 30rem;
     margin-top: 12rem;
     border-radius: 0.5rem;
+    box-shadow: 0 0 90px 5px rgb(0, 0, 0);
 }
 
 h1{
@@ -71,4 +72,8 @@ body{
     height: 4.5vmin;
     color: aliceblue;
     cursor: pointer;
+}
+
+p{
+    color: red;
 }
