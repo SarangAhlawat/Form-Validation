@@ -1,27 +1,94 @@
-let form = document.querySelector(".form-container");
+// form elements
+const form = document.getElementById('form-container');
+const nameInput = document.getElementById('name-input');
+const emailInput = document.getElementById('email-input');
+const phoneInput = document.getElementById('phone-input');
+const passInput = document.getElementById('pass-input');
+const CpassInput = document.getElementById('Cpass-input');
 
-// input values 
-let name = document.getElementById("name-input").value;
-let email = document.getElementById("email-input").value;
-let phone = document.getElementById("phone-input").value;
-let pass = document.getElementById("pass-input").value;
-let Cpass = document.getElementById("Cpass-input").value;
+// error elements
+const nameError = document.querySelector('.name-error');
+const emailError = document.querySelector('.email-error');
+const phoneError = document.querySelector('.phone-error');
+const passError = document.querySelector('.pass-error');
+const CpassError = document.querySelector('.Cpass-error');
+const nameError2 = document.querySelector('.name-error2');
+const passError2 = document.querySelector('.pass-error2');
 
-//event listener
-form.addEventListener('submit', validateForm);
 
+// Add event listener to the form
+form.addEventListener('submit', (event) => {
 
-function validateForm(event) {
     event.preventDefault();
 
-    if (name == 'l') {
-        alert('Name is required');
-        return false;
-      }
-  
-      // Validate the email field
-      if (email === '') {
-        alert('Email is required');
-        return;
-      }
+    // Validate inputs
+    let valid = true;
+
+    // Validate name
+    if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Name field cannot be empty';
+        valid = false;
+    } else if (nameInput.value.length < 4) {
+        nameError.textContent = 'Name cannot be too short';
+        valid = false;
+
+    } else {
+        nameError.textContent = '';
+    }
+
+    // Validate email
+    function validEmail(email) {
+        const emailContent = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailContent.test(email);
+    }
+
+    if (validEmail(emailInput.value)) {
+        emailError.textContent = '';
+    } else {
+        emailError.textContent = 'Enter a valid email';
+        valid = false;
+    }
+
+    // Validate phone
+    const phoneValid = /^[0-9]{10}$/;
+    if (phoneValid.test(phoneInput.value)) {
+        phoneError.textContent = '';
+    } else {
+        phoneError.textContent = 'Enter a valid number';
+        valid = false;
+    }
+
+    // Validate password
+    const passValid = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*\[0-9])/;
+    if (passInput.value.trim() === '') {
+        passError2.textContent =  'Enter a valid password';
+        valid = false;
+    } else if (!passValid.test(passInput.value)) {
+        passError2.textContent = 'Enter a valid password';
+        valid = false;
+    }
+    else {
+        passError.textContent = '';
+    }
+
+    // Validate confirm password
+    if (CpassInput.value.trim() !== passInput.value.trim()) {
+        CpassError.textContent = 'Passwords should match';
+        valid = false;
+    } else {
+        CpassError.textContent = '';
+    }
+
+    // If the form is valid, submit it
+    if (valid) {
+        form.submit();
+    }
+});
+
+const showPass = () => {
+    if(passInput.type === 'password') {
+        passInput.type = 'text'
+    } else {
+        passInput.type = 'password'
+    }
 }

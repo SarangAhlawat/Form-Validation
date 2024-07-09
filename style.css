@@ -42,7 +42,7 @@ body{
 
 .phone-label, #phone-input {
     position: relative;
-    right: 0.0149rem;
+    right: 0.02rem;
 }
 
 .pass-label, #pass-input {
