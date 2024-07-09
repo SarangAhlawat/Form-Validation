@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+
+    <!-- can add a bootstrap file above to get pre-defined resposive design and style -->
     <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
     <title>Form Validation</title>
 </head>
@@ -15,7 +17,7 @@
     <section id="section">
         <div class="input-container">
             <h1 class="heading">Form Validation</h1>
-
+            <!-- adding a form which will be called in JavaScript file -->
             <form id="form-container">
 
                 <label for="name-input" class="text-label">Name:</label>
@@ -36,6 +38,7 @@
                 <label for="pass-input" class="pass-label">Password:</label>
                 <input type="password" class="inputbox" id="pass-input" placeholder="Enter Password"><br>
                 <input type="checkbox" onclick="showPass()">Show Password<br>
+                <!-- on clicking checkbox password will be visible -->
                 <p class="pass-error paras" style="position: relative; left: 0.5rem;"></p>
 
 
@@ -46,10 +49,12 @@
 
                 <input type="submit" class="submit btn" placeholder="Submit">
                 <input type="reset" class="reset btn" placeholder="Reset" onclick="resetFunction()">
+                <!-- clicking reset button error messages also be reset(currently disabled) -->
             </form>
         </div>
     </section>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -57,9 +57,9 @@ form.addEventListener('submit', (event) => {
     }
 
     // password
-    const passValid = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*\[0-9])/;
+    const passValid = /^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])/;
     if (passInput.value.trim() === '') {
-        passError.textContent =  'Enter a valid password';
+        passError.textContent = 'Enter a valid password';
         valid = false;
     } else if (!passValid.test(passInput.value)) {
         passError.textContent = 'Enter a valid password';
@@ -84,7 +84,7 @@ form.addEventListener('submit', (event) => {
 });
 
 const showPass = () => {
-    if(passInput.type === 'password') {
+    if (passInput.type === 'password') {
         passInput.type = 'text'
     } else {
         passInput.type = 'password'

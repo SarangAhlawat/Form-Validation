@@ -3,6 +3,7 @@
     margin: 0;
 }
 
+/* align items and flex */
 #section {
     text-align: center;
     display: flex;
@@ -14,6 +15,7 @@
     
 }
 
+/* styling form content area*/
 .input-container{
     background-color: rgba(255, 255, 255, 0.921);
     width: 30rem;
@@ -24,16 +26,19 @@
 
 h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: xx-large;
+    font-size: 2.5rem;
+    font-weight: normal;
     margin: 1rem;
 }
 
+/* background image set */
 body{
     background-image: url('bg-img.jpg');
     background-size: cover;
     min-height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 .email-label, #email-input{
     position: relative;
