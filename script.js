@@ -52,7 +52,7 @@ form.addEventListener('submit', (event) => {
     if (phoneValid.test(phoneInput.value)) {
         phoneError.textContent = '';
     } else {
-        phoneError.textContent = 'Enter a valid number';
+        phoneError.textContent = 'Phone number should be 10 digits long';
         valid = false;
     }
 
@@ -62,7 +62,7 @@ form.addEventListener('submit', (event) => {
         passError.textContent = 'Enter a valid password';
         valid = false;
     } else if (!passValid.test(passInput.value)) {
-        passError.textContent = 'Enter a valid password';
+        passError.textContent = 'Password should contain:  \nAtleast one upper case,\none lower case,\none number\nand a special character.';
         valid = false;
     }
     else {
@@ -90,6 +90,8 @@ const showPass = () => {
         passInput.type = 'password'
     }
 }
+
+
 
 // let paras = document.querySelectorAll('.paras');
 
